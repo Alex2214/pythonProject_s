@@ -23,5 +23,5 @@ fake_trades = [
 ]
 
 @app.get("trades")
-def get_trades(limit: int, offset: int):
+def get_trades(limit: int = 10, offset: int = 10):
     return fake_trades[offset:][:limit]
